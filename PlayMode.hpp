@@ -2,6 +2,7 @@
 
 #include "Scene.hpp"
 #include "Sound.hpp"
+#include "Dialogue.hpp"
 
 #include <glm/glm.hpp>
 
@@ -23,26 +24,58 @@ struct PlayMode : Mode {
 	struct Button {
 		uint8_t downs = 0;
 		uint8_t pressed = 0;
-	} left, right, down, up;
+	} front, down, up;
+
+	struct DialogueLine {
+		std::string dialogue_text;
+		int which;
+		int next;
+	};
 
 	//local copy of the game scene (so code can change it during gameplay):
 	Scene scene;
 
-	//hexapod leg to wobble:
-	Scene::Transform *hip = nullptr;
-	Scene::Transform *upper_leg = nullptr;
-	Scene::Transform *lower_leg = nullptr;
-	glm::quat hip_base_rotation;
-	glm::quat upper_leg_base_rotation;
-	glm::quat lower_leg_base_rotation;
-	float wobble = 0.0f;
+	// 3D asset control
+	Scene::Transform *cube = nullptr;
+	Scene::Transform *knot = nullptr;
+	std::vector<Scene::Transform*> collectibles;
+	std::vector<int> play_which;
+	std::vector<float> shrink;
+	glm::quat cube_base_rotation;
+	glm::quat knot_base_rotation;
+	glm::quat camera_base_rotation;
+	glm::vec3 cube_base_position;
+	glm::vec3 knot_base_position;
+	glm::vec3 camera_base_position;
+	glm::vec3 collectible_base_scale;
+	float swing = 0.0f;
+	bool listening = false;
+	bool pinching = false;
+	bool collecting = false;
+	float camera_rotation_angle = 0.0f;
+	float angle = 0.0f;
+	glm::vec3 camera_rel_cube;
+	std::shared_ptr< Sound::PlayingSample > bgm;
 
-	glm::vec3 get_leg_tip_position();
+	// game flow control
+	bool reset = false;
+	bool shrinking = false;
+	bool over = false;
+	int points = 0;
+	float until_restart = 5.0f;
 
-	//music coming from the tip of the leg (as a demonstration):
-	std::shared_ptr< Sound::PlayingSample > leg_tip_loop;
-	
+	// dialogue related
+	bool dialogue_mode = true;
+	bool at_choice = false;
+	bool play_last_sound = false;
+	bool pls_already = false;
+	int choice_index = 0;
+	bool first_choice_left = true;
+	std::vector<DialogueLine> lines;
+	int cur_lines = 0;
+	int next = -2;
+
+
 	//camera:
 	Scene::Camera *camera = nullptr;
-
 };

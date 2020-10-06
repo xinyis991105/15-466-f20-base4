@@ -115,7 +115,9 @@ COMMON_NAMES =
 	PathFont
 	PathFont-font
 	DrawLines
+	Dialogue
 	ColorProgram
+	ColorTextureProgram
 	Scene
 	Mesh
 	load_save_png
@@ -138,7 +140,9 @@ SHOW_SCENE_NAMES =
 	ShowSceneMode
 	;
 
-
+DIALOGUE_GENERATION_NAMES =
+	dialogue_generation
+	;
 
 LOCATE_TARGET = objs ; #put objects in 'objs' directory
 Objects 
@@ -146,6 +150,7 @@ Objects
 	$(COMMON_NAMES:S=.cpp)
 	$(SHOW_MESHES_NAMES:S=.cpp)
 	$(SHOW_SCENE_NAMES:S=.cpp)
+	$(DIALOGUE_GENERATION_NAMES:S=.cpp)
 	;
 
 #------------------------
@@ -158,6 +163,9 @@ Objects
 
 LOCATE_TARGET = dist ; #put main in 'dist' directory
 MainFromObjects game : $(GAME_NAMES:S=$(SUFOBJ)) $(COMMON_NAMES:S=$(SUFOBJ)) ;
+
+LOCATE_TARGET = dialogue ;
+MainFromObjects dialogue_generation : $(DIALOGUE_GENERATION_NAMES:S=$(SUFOBJ)) $(COMMON_NAMES:S=$(SUFOBJ)) ;
 
 LOCATE_TARGET = scenes ; #put show-meshes and show-scene utilities in the 'scenes' directory:
 MainFromObjects show-meshes : $(SHOW_MESHES_NAMES:S=$(SUFOBJ)) $(COMMON_NAMES:S=$(SUFOBJ)) ;

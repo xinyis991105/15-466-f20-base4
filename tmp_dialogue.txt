@@ -1,0 +1,46 @@
+Hi there! 2
+I'm Ms Balloon! 3
+Shall we play a game? 32
+Ah...I'll take that as a yes. 5
+Let's move! 6
+You know, there hasn't been a bunch of folks around these days. 7
+I'm a balloon so I couldn't really move. 8
+It's like when you humans lose gravity. 0
+That's when you're filled with gas! But I'm not! 35
+Yep! 12
+Hehe you'll figure out! 12
+See these floating balls? 13
+These are my supplies! 14
+But I couldn't tell which are good and which are bad... 15
+Can you help me distinguish and get these? 36
+I think someone said the ones making bass sounds are bad... 17
+But I can't tell cuz I'm a balloon! 18
+Do you know what a bass is? 37
+Great! Let's start! 44
+Oh no! What did you do??? 21
+Why would you do this to me? 22
+Now I'm gonna shrink to nothing... -1
+Thank you so much! 24
+To return your favor 25
+I'm gonna tell you what I'm filled with. 26
+There is actually a curse in this space. 27
+I live on genki, vitality air, as you might call it, of people. 28
+The curse is that, whoever helps me gets turned into this little floating ball... 39
+I'm sorry, but that's all the meaning to my being... 40
+Just like how you humans have to go to school, work, get married, that kind of stuff... 41
+Is it bass? IDK...Now just need to wait for the next one to help me with that... -1
+... 4
+In space, you'll blow up. 9
+I see. 12
+What are you filled with then? 11
+But how? 16
+I think so... 19
+(What if I just mess around? What would happen to this balloon?) 0
+... 29
+... 30
+(I AM starting to feel the difference. My limbs become swollen and light.) 42
+(And I'm losing my perceptions...) 43
+(The last sound I can make is...) 31
+(Press L to listen to a ball when you are close enough.) 45
+(Press P to pinch a bad ball so that Ms Balloon won't be hurt.) 46
+(Press C to collect a good ball so that Ms Balloon can be supplied.) 38
